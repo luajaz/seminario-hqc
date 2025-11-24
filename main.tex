@@ -133,7 +133,7 @@ Suponha que a matriz geradora $G$ do código é uma matriz $k \times n$, onde $k
 \begin{enumerate}
     \item Sorteamos $k$ colunas de $G$, na esperança de que as respectivas posições de $c$ não contenham erros.
     \item Seja $G'$ a matriz quadrada formada por essas colunas, e $c'$ e $e'$ os vetores formados pelas respectivas posições de $c$ e $e$.
-    \item Se fomos bem sucedidos em evitar os erros, teremos \[ 3 \] \[ \implies m = c'(G')^{-1}  \] onde $m$ é a mensagem decodificada que obtemos.
+    \item Se fomos bem sucedidos em evitar os erros, teremos \[  mG' + \underbrace{e'}_{=0} = c' \] \[ \implies m = c'(G')^{-1}  \] onde $m$ é a mensagem decodificada que obtemos.
     \item Checamos se isso de fato ocorreu calculando a síndrome \[ Hm = s\] Se $s = 0$, $m$ é a mensagem original e a decodificação foi bem sucedida. Caso contrário, voltamos ao passo 1.
 \end{enumerate}
 
